@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0A0E1A;
+  --ink-800: #111827;
+  --ink-700: #1F2937;
+  --bone: #FAFAF7;
+  --bone-200: #F3F3EE;
+  --signal: #00D4FF;
+  --signal-soft: #7FEAFF;
+
+  --brand-tibok: #0066CC;
+  --brand-lexora: #5B21B6;
+  --brand-axon: #D4AF37;
+  --brand-bpo: #0D9488;
+  --brand-occ: #1E3A8A;
+  --brand-occ-accent: #FF6B6B;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+html,
+body {
+  background: var(--ink);
+  color: var(--bone);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--ink);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 50%, transparent 85%);
+}
+
+.bg-radial-signal {
+  background: radial-gradient(60% 60% at 50% 0%, rgba(0, 212, 255, 0.18), transparent 70%);
+}
+
+.entity-accent {
+  background-color: var(--entity, var(--signal));
+}
+
+.text-entity {
+  color: var(--entity, var(--signal));
+}
+
+.border-entity {
+  border-color: var(--entity, var(--signal));
+}
+
+.ring-entity {
+  --tw-ring-color: var(--entity, var(--signal));
+}
