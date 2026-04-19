@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Maison Noir — Photographe d'art. Portraits, éditoriaux et reportages d'exception. Une vision intemporelle du luxe et de l'élégance." />
+  <meta name="keywords" content="photographe luxe, portrait haut de gamme, éditorial, photographe paris, maison noir" />
+  <meta name="author" content="Maison Noir" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Maison Noir — Photographie d'art" />
+  <meta property="og:description" content="Portraits, éditoriaux et reportages d'exception. Une vision intemporelle du luxe." />
+  <meta property="og:image" content="/assets/og-cover.jpg" />
+
+  <title>Maison Noir — Photographie d'art</title>
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+  <link rel="preload" as="style" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='58%25' text-anchor='middle' font-family='Georgia,serif' font-size='18' fill='%23c9a961' font-weight='300'%3EM%3C/text%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Maison Noir",
+    "description": "Photographe d'art spécialisé dans les portraits, éditoriaux et reportages haut de gamme.",
+    "priceRange": "€€€€",
+    "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ───────── Loader ───────── -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">M</span>
+      <span class="loader__bar"><span class="loader__bar-fill"></span></span>
+    </div>
+  </div>
+
+  <!-- ───────── Cursor (desktop only) ───────── -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- ───────── Navigation ───────── -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo" aria-label="Maison Noir — Accueil">
+      <span class="nav__logo-mark">M</span>
+      <span class="nav__logo-text">Maison<span>&nbsp;Noir</span></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#portfolio" data-link>Portfolio</a>
+      <a href="#about" data-link>Studio</a>
+      <a href="#services" data-link>Services</a>
+      <a href="#journal" data-link>Journal</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+
+    <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ───────── Mobile menu ───────── -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__links" aria-label="Navigation mobile">
+      <a href="#portfolio" data-link><span>01</span>Portfolio</a>
+      <a href="#about" data-link><span>02</span>Studio</a>
+      <a href="#services" data-link><span>03</span>Services</a>
+      <a href="#journal" data-link><span>04</span>Journal</a>
+      <a href="#contact" data-link><span>05</span>Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <p>contact@maisonnoir.studio</p>
+      <p>Paris · Milan · New York</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ───────── Hero ───────── -->
+    <section class="hero" id="home">
+      <div class="hero__media">
+        <picture>
+          <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1506863530036-1efeddceb993?auto=format&fit=crop&w=900&q=70" />
+          <img
+            src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?auto=format&fit=crop&w=2000&q=80"
+            alt="Portrait en noir et blanc, lumière naturelle"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="2000" height="1333" />
+        </picture>
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__content">
+        <span class="hero__eyebrow" data-split>Photographie d'art · Depuis 2011</span>
+        <h1 class="hero__title">
+          <span class="line"><span data-split>L'instant,</span></span>
+          <span class="line"><span data-split>gravé dans</span></span>
+          <span class="line italic"><span data-split>la lumière.</span></span>
+        </h1>
+        <p class="hero__lede" data-split>
+          Portraits, éditoriaux et reportages d'exception pour les maisons,
+          créateurs et personnalités qui cultivent l'élégance du détail.
+        </p>
+        <a href="#portfolio" class="btn btn--line" data-link>
+          <span>Découvrir le travail</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__meta">
+        <span>N° 01</span>
+        <span>Paris — 48.8566° N</span>
+        <span class="hero__scroll">
+          <span class="hero__scroll-line"></span>
+          Scroll
+        </span>
+      </div>
+    </section>
+
+    <!-- ───────── Marquee ───────── -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Hermès</span><span>·</span><span>Dior</span><span>·</span>
+        <span>Vogue Paris</span><span>·</span><span>Chanel</span><span>·</span>
+        <span>Louis Vuitton</span><span>·</span><span>AD Magazine</span><span>·</span>
+        <span>Rolex</span><span>·</span><span>Cartier</span><span>·</span>
+        <span>Hermès</span><span>·</span><span>Dior</span><span>·</span>
+        <span>Vogue Paris</span><span>·</span><span>Chanel</span><span>·</span>
+        <span>Louis Vuitton</span><span>·</span><span>AD Magazine</span><span>·</span>
+      </div>
+    </section>
+
+    <!-- ───────── Intro ───────── -->
+    <section class="intro reveal">
+      <div class="intro__label"><span></span>Manifeste</div>
+      <h2 class="intro__text">
+        Chaque image est une <em>archive silencieuse</em> — une rencontre entre
+        la matière, la lumière et ceux qui osent <em>ralentir</em> le temps.
+      </h2>
+    </section>
+
+    <!-- ───────── Portfolio ───────── -->
+    <section class="portfolio" id="portfolio">
+      <header class="section-head reveal">
+        <span class="section-head__num">01 — Portfolio</span>
+        <h2 class="section-head__title">Œuvres <em>choisies</em></h2>
+        <div class="filters" role="tablist" aria-label="Filtrer les œuvres">
+          <button class="filters__btn is-active" role="tab" aria-selected="true" data-filter="all">Tout</button>
+          <button class="filters__btn" role="tab" aria-selected="false" data-filter="portrait">Portrait</button>
+          <button class="filters__btn" role="tab" aria-selected="false" data-filter="editorial">Éditorial</button>
+          <button class="filters__btn" role="tab" aria-selected="false" data-filter="interior">Intérieur</button>
+          <button class="filters__btn" role="tab" aria-selected="false" data-filter="travel">Voyage</button>
+        </div>
+      </header>
+
+      <div class="gallery" id="gallery">
+        <!-- items injected by JS -->
+      </div>
+
+      <div class="portfolio__foot reveal">
+        <a href="#contact" class="btn btn--ghost" data-link>
+          <span>Demander le book complet</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ───────── Parallax quote ───────── -->
+    <section class="quote">
+      <div class="quote__bg" data-parallax></div>
+      <blockquote class="quote__text reveal">
+        <span>«</span>
+        La photographie est l'art de faire silence
+        <em>pour mieux écouter</em> la lumière.
+        <span>»</span>
+      </blockquote>
+      <cite class="quote__cite reveal">— Maison Noir, Journal 2024</cite>
+    </section>
+
+    <!-- ───────── About / Studio ───────── -->
+    <section class="about" id="about">
+      <div class="about__grid">
+        <figure class="about__media reveal">
+          <img
+            src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=1200&q=80"
+            alt="Portrait du studio Maison Noir"
+            loading="lazy" decoding="async" width="1200" height="1500" />
+        </figure>
+        <div class="about__text reveal">
+          <span class="section-head__num">02 — Studio</span>
+          <h2 class="section-head__title">Une vision <em>artisanale</em> de l'image.</h2>
+          <p>
+            Fondé à Paris en 2011, <strong>Maison Noir</strong> est un studio de photographie
+            qui conjugue la rigueur du geste argentique et la précision numérique contemporaine.
+            Chaque projet est pensé comme une pièce unique — du repérage à la post-production,
+            en passant par l'impression fine art.
+          </p>
+          <p>
+            Notre travail a été publié dans <em>Vogue</em>, <em>AD Magazine</em>, <em>The Gentlewoman</em>
+            et accompagne les maisons de haute joaillerie, de mode et d'hôtellerie
+            les plus exigeantes.
+          </p>
+
+          <dl class="about__stats">
+            <div><dt>12+</dt><dd>Années d'expérience</dd></div>
+            <div><dt>140</dt><dd>Projets livrés</dd></div>
+            <div><dt>22</dt><dd>Pays traversés</dd></div>
+            <div><dt>8</dt><dd>Publications internationales</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── Services ───────── -->
+    <section class="services" id="services">
+      <header class="section-head reveal">
+        <span class="section-head__num">03 — Services</span>
+        <h2 class="section-head__title">Prestations <em>sur-mesure</em></h2>
+      </header>
+
+      <ol class="services__list">
+        <li class="service reveal">
+          <span class="service__num">I</span>
+          <div class="service__body">
+            <h3>Portrait & Personnalité</h3>
+            <p>Portraits officiels, corporate d'auteur, direction artistique intimiste.</p>
+          </div>
+          <span class="service__price">à partir de 2 400 €</span>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">II</span>
+          <div class="service__body">
+            <h3>Éditorial & Campagne</h3>
+            <p>Direction d'image pour la mode, la beauté et les maisons de luxe.</p>
+          </div>
+          <span class="service__price">sur devis</span>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">III</span>
+          <div class="service__body">
+            <h3>Hôtellerie & Intérieurs</h3>
+            <p>Reportage d'atmosphère, lifestyle et architecture d'exception.</p>
+          </div>
+          <span class="service__price">à partir de 4 800 €</span>
+        </li>
+        <li class="service reveal">
+          <span class="service__num">IV</span>
+          <div class="service__body">
+            <h3>Mariage confidentiel</h3>
+            <p>Reportage discret, livre d'art relié main, tirages fine art inclus.</p>
+          </div>
+          <span class="service__price">sur demande</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ───────── Journal ───────── -->
+    <section class="journal" id="journal">
+      <header class="section-head reveal">
+        <span class="section-head__num">04 — Journal</span>
+        <h2 class="section-head__title">Carnets & <em>inspirations</em></h2>
+      </header>
+
+      <div class="journal__grid">
+        <article class="entry reveal">
+          <a href="#" class="entry__link">
+            <div class="entry__media">
+              <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=900&q=75" alt="" loading="lazy" decoding="async" width="900" height="1200" />
+            </div>
+            <div class="entry__body">
+              <span class="entry__meta">Récit · 04 min</span>
+              <h3>La lumière de Giverny en hiver</h3>
+              <p>Trois jours à arpenter les jardins dépouillés, à la recherche du bleu vénitien.</p>
+            </div>
+          </a>
+        </article>
+        <article class="entry reveal">
+          <a href="#" class="entry__link">
+            <div class="entry__media">
+              <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=75" alt="" loading="lazy" decoding="async" width="900" height="1200" />
+            </div>
+            <div class="entry__body">
+              <span class="entry__meta">Essai · 06 min</span>
+              <h3>Argentique ou silence numérique</h3>
+              <p>Pourquoi nous continuons de faire cohabiter les deux — et ce qu'ils révèlent.</p>
+            </div>
+          </a>
+        </article>
+        <article class="entry reveal">
+          <a href="#" class="entry__link">
+            <div class="entry__media">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=75" alt="" loading="lazy" decoding="async" width="900" height="1200" />
+            </div>
+            <div class="entry__body">
+              <span class="entry__meta">Atelier · 03 min</span>
+              <h3>Le tirage baryté, geste final</h3>
+              <p>Ce que l'on apprend d'une image lorsqu'on la regarde sous l'agrandisseur.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────── Contact ───────── -->
+    <section class="contact" id="contact">
+      <div class="contact__inner reveal">
+        <span class="section-head__num">05 — Contact</span>
+        <h2 class="contact__title">
+          Parlons de votre <em>prochain projet.</em>
+        </h2>
+        <a href="mailto:contact@maisonnoir.studio" class="contact__mail">
+          contact@maisonnoir.studio
+        </a>
+        <ul class="contact__meta">
+          <li>Studio Paris · 8, rue du Bac</li>
+          <li>+33 1 42 00 00 00</li>
+          <li>Lundi — Vendredi · 10h / 19h</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ───────── Footer ───────── -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="footer__brand">Maison&nbsp;Noir</span>
+      <nav class="footer__nav" aria-label="Réseaux">
+        <a href="#" rel="noopener">Instagram</a>
+        <a href="#" rel="noopener">Behance</a>
+        <a href="#" rel="noopener">LinkedIn</a>
+        <a href="#" rel="noopener">Vimeo</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2024</span> Maison Noir Studio. Tous droits réservés.</span>
+      <span>Design & code — <em>in-house</em></span>
+    </div>
+  </footer>
+
+  <!-- ───────── Lightbox ───────── -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galerie plein écran">
+    <button class="lightbox__close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.1" fill="none"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.1" fill="none"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.1" fill="none"/></svg>
+    </button>
+    <figure class="lightbox__stage">
+      <img class="lightbox__img" alt="" />
+      <figcaption class="lightbox__caption">
+        <span class="lightbox__caption-title"></span>
+        <span class="lightbox__caption-index"></span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
