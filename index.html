@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MERIDIAN · Holding technologique mauricienne</title>
+<meta name="ext-resource-dependency" content="assets/dr-bach.avif" data-resource-id="drBach" />
+<template id="__bundler_thumbnail" data-bg-color="#0A0A0A">
+  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="400" fill="#0A0A0A"/>
+    <g transform="translate(200 200)">
+      <rect x="-80" y="-80" width="160" height="160" transform="rotate(45)" fill="none" stroke="#C9A961" stroke-width="2" opacity="0.85"/>
+      <rect x="-40" y="-40" width="80" height="80" transform="rotate(45)" fill="#C9A961" opacity="0.55"/>
+      <circle cx="0" cy="0" r="5" fill="#C9A961"/>
+      <circle cx="0" cy="-110" r="3" fill="#C9A961" opacity="0.7"/>
+      <circle cx="110" cy="0" r="3" fill="#C9A961" opacity="0.7"/>
+      <circle cx="0" cy="110" r="3" fill="#C9A961" opacity="0.7"/>
+      <circle cx="-110" cy="0" r="3" fill="#C9A961" opacity="0.7"/>
+    </g>
+    <text x="200" y="340" text-anchor="middle" fill="#C9A961" font-family="serif" font-size="28" letter-spacing="8">MERIDIAN</text>
+  </svg>
+</template>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  html, body { background: #0A0A0A; }
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-feature-settings: "ss01","cv11"; }
+  .font-serif { font-family: 'Fraunces', 'Times New Roman', serif; font-weight: 400; }
+  .font-mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: #0A0A0A; }
+  ::-webkit-scrollbar-thumb { background: #222; border-radius: 4px; }
+  * { -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
