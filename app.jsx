@@ -1015,13 +1015,11 @@ function Research() {
           <p className="mt-6 text-[14px] text-white/50 leading-relaxed max-w-sm">
             Modèles conçus en partenariat avec l'<em className="text-white/80">unité INSERM de Marseille</em> et
             un consortium international de chirurgiens bariatriques.
-            Soumission en cours à <em className="text-white/70">npj Digital Medicine</em> (Nature Portfolio).
           </p>
 
           <div className="mt-8 pt-6 border-t border-white/10 space-y-3 text-[11px] uppercase tracking-[0.2em] text-white/40">
             <div>— INSERM Marseille</div>
             <div>— Consortium bariatrique EU</div>
-            <div>— Nature Portfolio · en revue</div>
           </div>
         </div>
 
@@ -1041,7 +1039,6 @@ function Research() {
             note="Partenariat avec un consortium de médecins et chirurgiens bariatriques de renommée internationale (France, UK, Italie)."
           />
           <div className="text-[11px] text-white/30 leading-relaxed pt-4 border-t border-white/5">
-            Soumission en cours — <em>npj Digital Medicine</em>, Nature Portfolio (2026).
             Protocoles validés par le comité éthique, anonymisation conforme DPA 2017.
           </div>
         </div>
@@ -1173,9 +1170,6 @@ function Founder({ accentColor }) {
                   <span><em className="text-white">Score BMN v3.5</em> — risque métabolique et profilage de la réponse aux analogues GLP-1 (N = 22 807, AUC 0,876).</span>
                 </li>
               </ul>
-              <p className="mt-4 text-[12px] text-white/45 italic">
-                Soumission en cours à <em>npj Digital Medicine</em> (Nature Portfolio).
-              </p>
             </div>
 
             {/* Aujourd'hui — écosystème */}
@@ -1332,7 +1326,7 @@ function Footer({ accentColor }) {
           </div>
           <FooterCol title="Marques" items={BRANDS.map(v => v.name)} />
           <FooterCol title="Groupe" items={["Thèse", "Recherche", "Fondateur", "Contact"]} />
-          <FooterCol title="Légal" items={["Mentions légales", "Confidentialité", "BRN C20173522", "Company C173522"]} />
+          <FooterCol title="Légal" items={[{ label: "Mentions légales", href: "mentions-legales.html" }, "Confidentialité", "BRN C20173522", "Company C173522"]} />
         </div>
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-white/30 font-mono">
           <div>© 2026 Digital Data Solutions Ltd · Flic en Flac, Mauritius</div>
@@ -1347,7 +1341,11 @@ function FooterCol({ title, items }) {
     <div>
       <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-4">{title}</div>
       <ul className="space-y-2 text-[12px] text-white/60">
-        {items.map((t, i) => <li key={i}><a href="#" className="hover:text-white transition">{t}</a></li>)}
+        {items.map((t, i) => {
+          const label = typeof t === "string" ? t : t.label;
+          const href = typeof t === "string" ? "#" : (t.href || "#");
+          return <li key={i}><a href={href} className="hover:text-white transition">{label}</a></li>;
+        })}
       </ul>
     </div>
   );
