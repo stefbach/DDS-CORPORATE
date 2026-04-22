@@ -537,7 +537,7 @@ function Hero({ accentColor, show3D, showVideo }) {
 
 function Thesis() {
   return (
-    <section className="relative py-28 md:py-40 border-b border-white/5">
+    <section id="these" className="relative py-28 md:py-40 border-b border-white/5">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-4">
           <div className="text-[11px] uppercase tracking-[0.25em] text-white/40">§ 01 — Thèse</div>
@@ -1324,8 +1324,13 @@ function Footer({ accentColor }) {
               Une entreprise technologique mauricienne. Santé, finance, intelligence artificielle, opérations — six marques, une équipe.
             </p>
           </div>
-          <FooterCol title="Marques" items={BRANDS.map(v => v.name)} />
-          <FooterCol title="Groupe" items={["Thèse", "Recherche", "Fondateur", "Contact"]} />
+          <FooterCol title="Marques" items={BRANDS.map(v => ({ label: v.name, href: v.url && v.url !== "#" ? v.url : "#verticales", external: v.url && v.url !== "#" }))} />
+          <FooterCol title="Groupe" items={[
+            { label: "Thèse", href: "#these" },
+            { label: "Recherche", href: "#recherche" },
+            { label: "Fondateur", href: "#fondateur" },
+            { label: "Contact", href: "#contact" },
+          ]} />
           <FooterCol title="Légal" items={[{ label: "Mentions légales", href: "mentions-legales.html" }, "Confidentialité", "BRN C20173522", "Company C173522"]} />
         </div>
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4 text-[11px] text-white/30 font-mono">
@@ -1344,7 +1349,18 @@ function FooterCol({ title, items }) {
         {items.map((t, i) => {
           const label = typeof t === "string" ? t : t.label;
           const href = typeof t === "string" ? "#" : (t.href || "#");
-          return <li key={i}><a href={href} className="hover:text-white transition">{label}</a></li>;
+          const external = typeof t !== "string" && t.external;
+          return (
+            <li key={i}>
+              <a
+                href={href}
+                className="hover:text-white transition"
+                {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+              >
+                {label}
+              </a>
+            </li>
+          );
         })}
       </ul>
     </div>
