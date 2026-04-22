@@ -1297,7 +1297,11 @@ function Contact({ accentColor }) {
           <div>
             <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-3">Siège</div>
             <div className="font-serif text-[22px] text-white">Flic en Flac</div>
-            <div className="text-[14px] text-white/50 mt-1">Maurice · Indian Ocean</div>
+            <div className="text-[14px] text-white/50 mt-1 leading-relaxed">
+              7 Ocean Avenue, Sea View<br />
+              Les Jardins d'Anna<br />
+              Flic en Flac · Maurice
+            </div>
             <div className="mt-4 font-mono text-[11px] text-white/50"><a href={`tel:${COMPANY_PHONE_INTL}`} className="hover:text-white transition">{COMPANY_PHONE}</a></div>
           </div>
           <div className="font-mono text-[11px] text-white/40 space-y-1">
