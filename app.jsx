@@ -83,7 +83,7 @@ const BRANDS = [
       "Déploiement 48 heures",
       "Français · Anglais · Créole mauricien"
     ],
-    url: "https://axon-ai-iota.vercel.app/",
+    url: "https://axon-ai.tech/",
     color: "#8B7CF6",
     colorSoft: "rgba(139,124,246,0.14)",
   },
@@ -976,7 +976,7 @@ function AxonShowcase({ accentColor }) {
             </div>
           </div>
           <div className="md:col-span-4 md:text-right">
-            <a href="https://axon-ai-iota.vercel.app/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[12px] bg-white text-black px-5 py-3 rounded-full hover:bg-white/90 transition">
+            <a href="https://axon-ai.tech/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-[12px] bg-white text-black px-5 py-3 rounded-full hover:bg-white/90 transition">
               Découvrir AXON AI →
             </a>
           </div>
